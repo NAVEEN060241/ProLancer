@@ -1,4 +1,5 @@
 # **📅 Date: December 30, 2024**
+## *Note: This is an Sample "Landing Page Project" by focusing only on React.js and Tailwind.css*  
 ## **🌟 Overview**
 The first release of Pro Lancer marks the official launch of my freelancing services platform. This version establishes the core functionality, providing users with an intuitive interface and seamless browsing experience to explore my services.
 
