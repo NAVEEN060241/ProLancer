@@ -1,0 +1,63 @@
+@tailwind base; /* Import Tailwind's base styles */
+@tailwind components; /* Import Tailwind's component styles */
+@tailwind utilities; /* Import Tailwind's utility styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* Import Google Fonts */
+
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Use border-box sizing */
+}
+
+/* Apply line-through style to specific list items in priceContainer */
+.priceContainer:nth-child(1) ul li:nth-child(4),
+.priceContainer:nth-child(1) ul li:nth-child(5) {
+  text-decoration: line-through !important;
+}
+.priceContainer:nth-child(2) ul li:nth-child(5) {
+  text-decoration: line-through !important;
+}
+
+@layer components {
+  header {
+    @apply sticky top-0 z-10; /* Make header sticky */
+  }
+
+  .navbarContainer {
+    @apply flex justify-between items-center bg-blogPrimary py-3 text-lg text-black w-full; /* Style for navbar container */
+  }
+  nav ul li a {
+    @apply select-none hover:bg-blogSecondary px-5 py-2 rounded-full hover:text-blogPrimary cursor-pointer transition-all duration-300; /* Style for navbar links */
+  }
+
+  main {
+    @apply flex flex-col gap-40; /* Style for main container */
+  }
+
+  section:not(section:nth-child(3)) {
+    @apply scroll-m-32; /* Margin for sections except the third one */
+  }
+  section:nth-child(3) {
+    @apply scroll-m-24; /* Margin for the third section */
+  }
+
+  .getStartedbtn {
+    @apply bg-blogSecondary text-white font-medium px-6 py-3 rounded-full select-none hover:bg-black transition-all duration-300; /* Style for get started button */
+  }
+
+  .storiesContainer {
+    @apply border-2 border-black rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300;
+    /* Style for stories container */
+  }
+
+  .priceContainer {
+    @apply relative w-1/4 flex flex-col items-center gap-5 p-8  rounded-2xl bg-blogPrimary shadow-blogPriceShadow hover:shadow-none hover:border-4 border-solid border-blogSecondary transition-all duration-300;
+    /* Style for price container */
+  }
+
+  .footerContainer {
+    @apply mt-40 bg-blogPrimary h-80 w-full flex flex-col items-center justify-center text-center gap-10;
+    /* Style for footer container */
+  }
+}
